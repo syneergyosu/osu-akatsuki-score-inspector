@@ -1,0 +1,498 @@
+/*changing default properties to make it cleaner*/
+
+head, body{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    /*display:flex; this stops objects moving when zooming in and out*/
+}
+
+p{
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Comfortaa", sans-serif;
+    color: white;
+}
+
+a{
+    color: rgb(200, 89, 138);  
+}
+
+/*body style*/
+.body-container{
+    background-color: rgb(24,23,28);
+    width: auto;
+    height: 2100px;
+    z-index: 1;
+    position: relative;
+}
+
+/*navigation bar style*/
+.nav-bar-container{
+    display: flex; 
+    align-items: center;
+    border: 1px none red;
+    height: 64px;
+    width: auto;
+    background-color: rgb(52,50,63);
+    box-shadow: 0px 2px 7px rgb(0, 0, 0, 0.5);
+    z-index: 2;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*containers within nav-bar to make it neater*/
+.nav-bar-logo {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center vertically */
+    height: 64px;
+    width: 240px;
+    vertical-align: top;
+}
+
+.nav-bar-logo-text {
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-bar-logo-text a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar-buttons{
+    display: flex; 
+    align-items: center;
+    height: 64px;
+    width: 1590px;
+}
+
+/*nav-bar-buttons styling and functionality*/
+.search-button,.leaderboards-button,.top-scores-button,.stats-button,.tools-button,.milestones-button{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center; 
+    color: rgb(200, 89, 138);
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-scores-button,.stats-button,.tools-button,.milestones-button{
+    margin-right: 15px;
+}
+
+.search-button i,.leaderboards-button i,.top-scores-button i,.stats-button i,.tools-button i,.milestones-button i{
+    font-size: inherit;
+    margin-right: 10px;
+}
+
+.search-button:hover,.leaderboards-button:hover,.top-scores-button:hover,.stats-button:hover,.tools-button:hover,.milestones-button:hover{
+    background-color: rgba(200, 89, 138, 0.1);
+}
+
+.expand-more-one-button{
+    margin-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 40px;
+    border: none;
+    display: flex;
+    align-items: center; 
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expand-more-one-button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-bar-signin{
+    display:flex;
+    align-items: center;
+    height: 64px;
+    width: 40px;
+}
+
+.osu-avatar-signin{
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/*containers within the body*/
+
+.top-card-container{
+    padding: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 10px;
+    width: auto;
+    height: 1841px;
+    background-color: rgb(44,42,55);
+    box-shadow: 0px 2px 7px rgb(0, 0, 0, 0.5);
+}
+
+.bottom-card-container{
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    width: auto;
+    height: 64px;
+    background-color: rgb(52,51,62);
+    box-shadow: 0px 2px 7px rgb(0, 0, 0, 0.5);
+    font-size: 16px;
+    color: white;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.bottom-card-text-container{
+    display: flex; /* Use flexbox layout */
+    align-items: center;
+    height: 64px;
+}
+
+/*container in top container*/
+/*warning container*/
+
+.warning-container{
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(25, 18, 7);
+    border-radius: 10px;
+    height: 48px;
+    width: auto;
+}
+
+.warning-text span{
+    margin-right: 10px;
+}
+
+.warning-text{
+    color: rgb(255, 226, 183);
+    font-size: 14px;
+}
+
+/*web-stats container*/
+
+.web-stats-container{
+    margin-top: 10px;
+    height: 130px;
+}
+
+.discord-card,.players-live-card,.scores-card,.profile-visits-card{
+    padding: 10px;
+    padding-top: 15px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: rgb(67,82,175);
+    border-radius: 10px;
+    width: 335px;
+    height: 100px;
+    margin-right:11px;
+}
+
+.players-live-card{
+    background-color: rgb(41,142,230);
+}
+
+.players-live-text{
+    margin-left: 10px;
+    font-size: 37px;
+    vertical-align: middle;
+}
+
+.scores-card{
+    background-color: rgb(230,67,63);
+}
+
+.profile-visits-card{
+    background-color: rgb(77,165,80);
+}
+
+.unique-users-card{
+    padding: 10px;
+    padding-top: 15px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: rgb(93,117,129);
+    border-radius: 10px;
+    width: 335px;
+    height: 100px;
+
+}
+
+.square-container{
+    margin-top: 18px; /*Changed the margin spacing between the card text and stats below*/
+    display: flex;
+    vertical-align: middle;
+    width: auto;
+}
+
+.square,.square-live,.square-scores,.square-visits,.square-unique-visits{
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+/*card icon colours*/
+.square i{
+    color: rgb(67,82,175);
+    padding: 8px;
+}
+
+.square-live i{
+    color: rgb(41,142,230);
+    padding: 8px;
+}
+
+.square-scores i{
+    color: rgb(230,67,63);
+    padding: 8px;
+}
+
+.square-visits i{
+    color: rgb(77,165,80);
+    padding: 8px;
+}
+
+.square-unique-visits i{
+    color: rgb(93,117,129);
+    padding: 8px;
+}
+
+.join-button{
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(200,89,138);
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover{
+    background-color: rgb(131, 50, 85);
+}
+
+/*pop-search-container*/
+
+.pop-search-container-background{
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    height: 900px;
+    width: 1929px;
+    position: fixed;
+    padding-top: 85px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pop-search-container-background.open{
+    z-index: 9999;
+    opacity: 1;
+}
+
+.pop-search-container{
+    padding-left: 20px;
+    margin-left: 380px;
+    border-radius: 10px;
+    width: 1150px;
+    height: 800px;
+    position: fixed;
+    z-index: 4;
+    background-color: rgba(44,42,55, 0.9);
+    opacity: 1;
+}
+
+.pop-search-inner{
+    display: flex;
+    margin-right: 20px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-search-inner i{
+    filter: invert();
+    padding-top: 7px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box-top{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 1120px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+/*horizontal line within search-box-top*/
+.horizontal-line{
+    border: white solid 1px;
+    opacity: 0.5;
+    width: 1125px;
+    transition: opacity 0.3s;
+}
+
+.search-box-top:hover + .horizontal-line:hover {
+    opacity: 1;
+}
+
+/*removes border around input textbox*/
+input:focus {
+    outline: none;
+}
+
+/*changed font style of placeholders text*/
+::placeholder {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*search-box bottom container*/
+
+.search-box-bottom{
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 1125px;
+    height: 670px;
+    max-height: 670px;
+    max-width: 1125px;
+    overflow: auto;
+}
+
+/*player card containers*/
+
+.player-card{
+    vertical-align: top;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: rgb(57,54,68);
+    border-radius: 15px;
+    display: inline-block;
+    width: 360px;
+    height: 140px;
+    box-shadow: 0px 5px 3px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.player-card:hover{
+    opacity: 0.8;
+}
+
+.player-avatar-image{
+    position: absolute; /* Position the avatar absolutely */
+    z-index: 2; /* Ensure the avatar is above other elements */
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 15px;
+    top: 0; 
+    left: 0; 
+}
+
+.player-flag-name{
+    width: 200px;
+    margin-top: 25px;
+    top: 0px; 
+    left: 80px; 
+    position: absolute;
+}
+
+.player-flag-text{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.player-level-text{
+    margin-right: 25px;
+    margin-top: 23px;
+    display: inline-block;
+    top: 0px; 
+    right: 0px;
+    position: absolute;
+    font-size: 25px;
+}
+
+.player-card-top{
+    display: inline-block;
+    position: relative;
+    height: 70px;
+}
+
+.player-card-top-background-image{
+    width: 360px; 
+    max-width: 360px; 
+    height: auto;
+    max-height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.player-card-bottom{
+    padding-left: 10px;
+    height: 70px;
+}
+
+.hexagon-image{
+    width: 70px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.player-rank{
+    line-height: 30px;
+    display: inline-block;
+    width: 100px;
+}
+
+.player-rank-text,.player-score-rank-text{
+    font-size: 25px;
+}
+
+.player-score-rank{
+    margin-left: 60px;
+    line-height: 30px;
+    display: inline-block;
+    width: 100px;
+}
