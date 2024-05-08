@@ -10,6 +10,11 @@ def home():
     # Render the home.html template
     return render_template('home.html')
 
+# Define a route for the user page
+@app.route('/user')
+def user():
+    return render_template('user.html')
+
 # Run the application if this script is executed directly
 if __name__ == '__main__':
     app.run(debug=True)

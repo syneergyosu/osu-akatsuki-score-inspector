@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>osu! akatsuki scores inspector</title> <!--title of tab-->
+        <link rel="icon" href="Icons/head-icon.jpg" > <!--tab icon-->
+
+        <!--linking css file-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+        <!--Comfortaa Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <!--Google Icons-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--script.js | currently opens a pop-up menu when clicking on search bar-->
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <div class="body-container">
+            <!--Search-Popup-Container-->
+            <div class="pop-search-container-background" id="pop-search-container-background">
+                <div class="pop-search-container" id="pop-search-container">
+                    <!--Top-->
+                    <div class="pop-search-inner">
+                        <i class="material-icons">search</i>
+                        <input class="search-box-top" type="text" placeholder="Search for a user">
+                    </div>
+                    <!--Horizontal Line-->
+                    <div class="horizontal-line"></div>
+                    <!--Bottom-->
+                    <div class="search-box-bottom">
+                        <!--Player card 1-->
+                        <div class="player-card">
+                            <div class="player-card-top">
+                                <img class="player-card-top-background-image" src="{{ url_for('static', filename='images/bg.jpg') }}">
+                                <div class="player-avatar">
+                                    <img class="player-avatar-image" src="{{ url_for('static', filename='images/syneergy-avatar.png') }}">
+                                </div>
+                                <div class="player-flag-name">
+                                    <p class="player-flag-text">GB</p>
+                                    <p class="player-name-text">Syneergy</p>
+                                </div>
+                                <div class="player-level">
+                                    <img class="hexagon-image" src="{{ url_for('static', filename='images/hexagon.png') }}">
+                                    <p class="player-level-text">97</p>
+                                </div>
+                            </div>
+                            <div class="player-card-bottom">
+                                <div class="player-rank">
+                                    <p>Global Rank</p>
+                                    <p class="player-rank-text">#263</p>
+                                </div>
+                                <div class="player-score-rank">
+                                    <p>Score Rank</p>
+                                    <p class="player-score-rank-text">#3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Player card 2-->
+                        <div class="player-card">
+                            <div class="player-card-top">
+                                <img class="player-card-top-background-image" src="{{ url_for('static', filename='images/91076.jpg') }}">
+                                <div class="player-avatar">
+                                    <img class="player-avatar-image" src="{{ url_for('static', filename='images/91076.png') }}">
+                                </div>
+                                <div class="player-flag-name">
+                                    <p class="player-flag-text">IT</p>
+                                    <p class="player-name-text">Adachi</p>
+                                </div>
+                                <div class="player-level">
+                                    <img class="hexagon-image" src="{{ url_for('static', filename='images/hexagon.png') }}">
+                                    <p class="player-level-text">77</p>
+                                </div>
+                            </div>
+                            <div class="player-card-bottom">
+                                <div class="player-rank">
+                                    <p>Global Rank</p>
+                                    <p class="player-rank-text">#215</p>
+                                </div>
+                                <div class="player-score-rank">
+                                    <p>Score Rank</p>
+                                    <p class="player-score-rank-text">#20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Nav-Bar-Container-->
+            <div class="nav-bar-container">
+                <div class="nav-bar-logo">
+                    <span class="nav-bar-logo-text"><a href="{{ url_for('home') }}">osu! scores inspector</a></span>
+                </div>
+                <div class="nav-bar-buttons">
+                    <button class="search-button" id="openButton"><i class="material-icons">search</i>SEARCH</button>
+                    <button class="expand-more-one-button"><i class="material-icons">expand_more</i></button>
+                    <button class="leaderboards-button"><i class="material-icons">leaderboard</i>LEADERBOARDS</button>
+                    <button class="expand-more-one-button"><i class="material-icons">expand_more</i></button>
+                    <button class="top-scores-button"><i class="material-icons">star</i>TOP SCORES</button>
+                    <button class="stats-button"><i class="material-icons">donut_large</i>STATS</button>
+                    <button class="tools-button"><i class="material-icons">build</i>TOOLS</button>
+                    <button class="milestones-button"><i class="material-icons">emoji_events</i>MILESTONES</button>
+                </div>
+                <div class="nav-bar-signin">
+                    <img class="osu-avatar-signin" src="{{ url_for('static', filename='images/osu-default-avatar.png') }}">
+                </div>
+            </div>
+            <div class="top-card-container">
+            </div>
+            <div class="bottom-card-container">
+                <div class="bottom-card-text-container">
+                    <p class="bottom-text">By <span><a href="https://akatsuki.gg/u/16625?mode=0&rx=1" target="_blank">Syneergy</a></span> 
+                        and <span><a href="https://akatsuki.gg/u/91076?mode=0&rx=1" target="_blank">Adachi</a></span> | credit goes to 
+                        <span><a href="https://osu.ppy.sh/users/10153735" target="_blank">Amayakase</a> | 
+                            <a href="https://score.kirino.sh/" target="_blank">Official website</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
