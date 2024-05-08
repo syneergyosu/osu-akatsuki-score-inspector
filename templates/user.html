@@ -8,7 +8,7 @@
         <link rel="icon" href="Icons/head-icon.jpg" > <!--tab icon-->
 
         <!--linking css file-->
-        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
 
         <!--Comfortaa Google Font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,6 +98,7 @@
                     <span class="nav-bar-logo-text"><a href="{{ url_for('home') }}">osu! scores inspector</a></span>
                 </div>
                 <div class="nav-bar-buttons">
+                    <!--Currently nothing added to these buttons-->
                     <button class="search-button" id="openButton"><i class="material-icons">search</i>SEARCH</button>
                     <button class="expand-more-one-button"><i class="material-icons">expand_more</i></button>
                     <button class="leaderboards-button"><i class="material-icons">leaderboard</i>LEADERBOARDS</button>
@@ -112,6 +113,21 @@
                 </div>
             </div>
             <div class="top-card-container">
+                <!--recent visitors container-->
+                <div class="recent-visitors-container">
+                    <!--recent visitors - mini player cards-->
+                    <p>Recent visitors (1 total): </p>
+                    <div class="mini-player-card">
+                        <img class="mini-player-card-avatar" src="/static/images/91076.jpg">
+                        <p class="mini-player-card-text">Adachi</p>
+                    </div>
+                    <div class="mini-player-card">
+                        <img class="mini-player-card-avatar" src="/static/images/syneergy-avatar.png">
+                        <p class="mini-player-card-text">Syneergy</p>
+                    </div>
+                    <!---->
+                </div>
+                <!---->
             </div>
             <div class="bottom-card-container">
                 <div class="bottom-card-text-container">
