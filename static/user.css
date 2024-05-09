@@ -1,4 +1,5 @@
 /*changing default properties to make it cleaner*/
+/*main color for containers "background-color: rgb(52,50,63);"*/
 
 head, body{
     margin-top: 0px;
@@ -178,7 +179,7 @@ a{
     padding-left: 16px;
     display: flex;
     align-items: center;
-    background-color: rgb(44,42,55);;
+    background-color: rgb(52,50,63);
     border-radius: 10px;
     height: 48px;
     width: auto;
@@ -313,6 +314,41 @@ a{
     padding-top: 5px;
     display: block;
     font-size: 14px;
+}
+
+/*player-nav-bar-container*/
+
+.player-nav-bar-container {
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    width: auto;
+    background-color: rgb(52, 50, 63);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-nav-buttons-container {
+    display: flex; /* Make it a flex container */
+    border: 1px solid red;
+}
+
+.player-nav-button {
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 10px;
+    color: rgb(209, 209, 209);
+    font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+}
+
+.player-nav-button i {
+    padding-right: 10px;
 }
 
 /*pop-search-container*/
