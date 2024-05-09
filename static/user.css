@@ -1,5 +1,6 @@
 /*changing default properties to make it cleaner*/
 /*main color for containers "background-color: rgb(52,50,63);"*/
+/*pink color text : "color: rgb(200, 89, 138);"*/
 
 head, body{
     margin-top: 0px;
@@ -332,7 +333,6 @@ a{
 
 .player-nav-buttons-container {
     display: flex; /* Make it a flex container */
-    border: 1px solid red;
 }
 
 .player-nav-button {
@@ -345,6 +345,17 @@ a{
     cursor: pointer;
     display: flex; /* Use flexbox */
     align-items: center; /* Center vertically */
+    transition: background-color 0.5s;
+}
+
+.player-nav-button:active{
+    background-color: rgba(200, 89, 138, 0.3);
+    color: rgb(200, 89, 138);
+}
+
+.player-nav-button:focus {
+    background-color: rgba(200, 89, 138, 0.3);
+    color: rgb(200, 89, 138,1);
 }
 
 .player-nav-button i {
